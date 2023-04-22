@@ -213,6 +213,10 @@ Le Master en Lean Management prépare les diplômés à occuper des postes de di
         </div>
       </section>
         
+        
+        <script src="master.js"></script>
+
+        
 <div id="form-container" style="display:none;">
   <h2>Inscription</h2>
   <form action="submit-form.php" method="post">
@@ -256,4 +260,45 @@ Le Master en Lean Management prépare les diplômés à occuper des postes de di
   formContainer.scrollIntoView({behavior: "smooth"});
 }
 
+    
+   function generateTableRows(products) {
+  const table = document.getElementById('product-table');
+  table.innerHTML = ''; // clear the table
+  products.forEach(product => {
+    const row = document.createElement('tr');
+	 row.className = "active-row";
+    row.innerHTML = `
+      <td>
+        <input id="checkbox" class="custom-checkbox"  type="checkbox" ${product.checked ? 'checked' : ''}>
+      </td>
+      <td>${product.name}</td>
+      <td>
+        <input class="inputquantity" type="number" value="${product.quantity}">
+      </td>
+      <td>
+        <select>
+          <option value="Cart" ${product.unit === 'Cart' ? 'selected' : ''}>Cart</option>
+          <option value="Unt" ${product.unit === 'Unt' ? 'selected' : ''}>Unt</option>
+          <!-- add more options for units here -->
+        </select>
+      </td>
+    `;
+    const checkbox = row.querySelector('input[type="checkbox"]');
+    checkbox.addEventListener('click', () => {
+      product.checked = checkbox.checked;
+    });
+
+    const quantityInput = row.querySelector('input[type="number"]');
+    quantityInput.addEventListener('change', () => {
+      product.quantity = parseInt(quantityInput.value);
+    });
+    const unitSelect = row.querySelector('select');
+    unitSelect.addEventListener('change', () => {
+      product.unit = unitSelect.value;
+    });
+    table.appendChild(row);
+    
+  });
+}
+ 
   </script>
