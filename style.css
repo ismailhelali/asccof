@@ -115,10 +115,23 @@ section {
   background-color: #0062cc;
 }
 
-/* Responsive layout - */
-@media screen and (max-width:750px) {
- .COURSE {
-       
-        width: 100%;
-      }
- }
+
+/* Responsive layout */
+@media screen and (max-width: 750px) {
+  .COURSE {
+    width: 100%;
+  }
+  
+  .COURSE h3 {
+    font-size: 24px;
+  }
+
+  .COURSE p {
+    font-size: 16px;
+  }
+
+  .COURSE button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
