@@ -31,9 +31,8 @@
         <div class="course">
           <h3>COACHING</h3>
           <p>Vous pouvez acquérir une spécialisation et des compétences professionnelles de haut niveau grâce à nos différents programmes de master.. </p>
-<a href="MASTER"> 
-    <button>INSCRIPTION</button> 
-</a>        </div>
+        <button id="coaching" onclick="displayForm('coaching')">INSCRIPTION</button>
+        </div>
         <div class="course">
           <h3>GESTION DES AFFAIRES</h3>
           <p>Cinq Formations visant à maîtriser le Marketing Digital , la gestion de production ou accroitre les connaissances en Développement personnel </p>
@@ -108,9 +107,32 @@
           </div>
         </div>
       </section>
+        
+   <div id="form-container" style="display:none;">
+  <form action="submit-form.php" method="post">
+    <input type="hidden" id="subject" name="subject">
+    <label for="name">Nom:</label>
+    <input type="text" id="name" name="name"><br><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"><br><br>
+    <label for="message">Message:</label>
+    <textarea id="message" name="message"></textarea><br><br>
+    <input type="submit" value="Envoyer">
+  </form>
+</div>
+        
     </main>
     <footer>
       <p>&copy; 2023 Academic E-Learning School. All rights reserved.</p>
     </footer>
   </body>
 </html>
+  
+  <script>
+    function displayForm(id) {
+  var formContainer = document.getElementById("form-container");
+  var subjectField = document.getElementById("subject");
+  formContainer.style.display = "block";
+  subjectField.value = id;
+}
+  </script>
