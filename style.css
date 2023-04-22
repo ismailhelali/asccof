@@ -118,19 +118,19 @@ section {
 
 /* Responsive layout */
 @media screen and (max-width: 750px) {
-  .COURSE {
+  .course {
     width: 100%;
   }
   
-  .COURSE h3 {
+  .course h3 {
     font-size: 24px;
   }
 
-  .COURSE p {
+  .course p {
     font-size: 16px;
   }
 
-  .COURSE button {
+  .course button {
     font-size: 16px;
     padding: 10px 20px;
   }
