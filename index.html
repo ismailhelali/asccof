@@ -1,120 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Academic E-Learning School</title>
-  <style>
-    /* Global Styles */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-    /* Header Styles */
-    header {
-      background-color: #F2F2F2;
-      padding: 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 48px;
-      font-weight: bold;
-      color: #4A4A4A;
-    }
-    /* Banner Styles */
-    .banner {
-      background-image: url('banner.jpg');
-      background-repeat: no-repeat;
-      background-size: cover;
-      height: 400px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      text-align: center;
-    }
-    .banner h2 {
-      font-size: 64px;
-      font-weight: bold;
-    }
-    /* Course Styles */
-    .course {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin: 50px 0;
-      padding: 20px;
-      background-color: #F2F2F2;
-    }
-    .course img {
-      width: 200px;
-      height: 200px;
-      object-fit: cover;
-      margin-right: 20px;
-    }
-    /* Testimonial Styles */
-    .testimonial {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin: 50px 0;
-      padding: 20px;
-      background-color: #F2F2F2;
-    }
-    .testimonial img {
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
-      margin-right: 20px;
-      border-radius: 50%;
-    }
-    /* Q&A Styles */
-    .qa {
-      margin: 50px 0;
-    }
-    .qa h2 {
-      font-size: 32px;
-      font-weight: bold;
-      color: #4A4A4A;
-      margin-bottom: 20px;
-    }
-    .qa ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
-    .qa li {
-      margin-bottom: 20px;
-    }
-    .qa li h3 {
-      font-size: 24px;
-      font-weight: bold;
-      color: #4A4A4A;
-      margin: 0;
-    }
-    .qa li p {
-      font-size: 18px;
-      color: #4A4A4A;
-      margin: 10px 0;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <div class="container">
-      <h1>Academic E-Learning School</h1>
-    </div>
-  </header>
-  <div class="banner">
-    <div class="container">
-      <h2>Learn from anywhere, anytime</h2>
-    </div>
-  </div>
-  <div class="container">
-    <div class
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic E-Learning School</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Courses</a></li>
+          <li><a href="#">Testimonials</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </nav>
+      <div id="hero">
+        <h1>Learn Anything, Anytime, Anywhere</h1>
+        <button>Get Started</button>
+      </div>
+    </header>
+    <main>
+      <section id="courses">
+        <div class="course">
+          <h3>Course 1</h3>
+          <p>Description of Course 1</p>
+          <button>Enroll Now</button>
+        </div>
+        <div class="course">
+          <h3>Course 2</h3>
+          <p>Description of Course 2</p>
+          <button>Enroll Now</button>
+        </div>
+        <div class="course">
+          <h3>Course 3</h3>
+          <p>Description of Course 3</p>
+          <button>Enroll Now</button>
+        </div>
+        <div class="course">
+          <h3>Course 4</h3>
+          <p>Description of Course 4</p>
+          <button>Enroll Now</button>
+        </div>
+      </section>
+      <section id="testimonials">
+        <h2>What Our Students Say</h2>
+        <div class="slider">
+          <div class="slides">
+            <div class="slide">
+              <img src="https://via.placeholder.com/80x80.png?text=Student+1" alt="Student 1">
+              <p>"I learned so much from this program. Highly recommend!"</p>
+              <h4>Student 1</h4>
+            </div>
+            <div class="slide">
+              <img src="https://via.placeholder.com/80x80.png?text=Student+2" alt="Student 2">
+              <p>"I loved the flexibility and convenience of this online school."</p>
+              <h4>Student 2</h4>
+            </div>
+            <div class="slide">
+              <img src="https://via.placeholder.com/80x80.png?text=Student+3" alt="Student 3">
+              <p>"The instructors were knowledgeable and supportive."</p>
+              <h4>Student 3</h4>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="accordion">
+          <div class="accordion-item">
+            <h3>What courses are offered?</h3>
+            <div class="accordion-content">
+              <p>We offer a wide range of courses in various subjects, including computer science, business, and humanities. Check out our Courses page for more information.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3>What is the cost of tuition?</
+
+</h3>
+            <div class="accordion-content">
+              <p>Tuition varies depending on the course and program you choose. Visit our Courses page for pricing information.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3>How long does it take to complete a course?</h3>
+            <div class="accordion-content">
+              <p>Course duration varies depending on the subject and level. Most courses take between 4 and 12 weeks to complete.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3>Do I need any special software or equipment?</h3>
+            <div class="accordion-content">
+              <p>You may need certain software or equipment depending on the course you choose. Check the course description for requirements.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2023 Academic E-Learning School. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
