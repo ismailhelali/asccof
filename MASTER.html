@@ -5,6 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>asccof Academic E-Learning </title>
     <link rel="stylesheet" href="style.css">
+    <style>
+      #form-container {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  width: 50%;
+  margin: auto;
+  margin-top: 50px;
+}
+
+#form-container h2 {
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+  #form-container {
+    width: 80%;
+  }
+}
+
+    </style>
   </head>
   <body> 
     <header>
@@ -108,21 +164,31 @@
         </div>
       </section>
         
-  <div id="form-container" style="display:none;">
+<div id="form-container" style="display:none;">
+  <h2>Inscription</h2>
   <form action="submit-form.php" method="post">
     <input type="hidden" id="subject" name="subject">
-    <label for="id">ID:</label>
-    <input type="text" id="id" name="id" readonly><br><br>
-    <label for="name">Nom:</label>
-    <input type="text" id="name" name="name"><br><br>
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email"><br><br>
-    <label for="message">Message:</label>
-    <textarea id="message" name="message"></textarea><br><br>
-    <input type="submit" value="Envoyer">
+    <div class="form-group">
+      <label for="id">ID:</label>
+      <input type="text" id="id" name="id" readonly>
+    </div>
+    <div class="form-group">
+      <label for="name">Nom:</label>
+      <input type="text" id="name" name="name">
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
+    </div>
+    <div class="form-group">
+      <label for="message">Message:</label>
+      <textarea id="message" name="message"></textarea>
+    </div>
+    <div class="form-group">
+      <input type="submit" value="Envoyer">
+    </div>
   </form>
 </div>
-        
     </main>
     <footer>
       <p>&copy; 2023 Academic E-Learning School. All rights reserved.</p>
