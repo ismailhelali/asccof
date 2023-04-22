@@ -114,9 +114,12 @@ section {
 .course button:hover {
   background-color: #0062cc;
 }
+@media only screen and (max-width: 767px) {
+#courses {
+display: block;
+}
 
-@media screen and (max-width: 600px) {
-  .course {
-    width: 100%;
-  }
+.course {
+width: 100%;
+}
 }
