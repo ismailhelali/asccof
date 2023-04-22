@@ -114,13 +114,14 @@ section {
 .course button:hover {
   background-color: #0062cc;
 }
-@media only screen and (max-width: 1000px) {
-#courses {
- display:flex;
-  flex-wrap:wrap;
- }
 
-.course {
-width: 100%;
-}
+@media only screen and (max-width: 1000px) {
+  #courses {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .course {
+    width: 100%;
+  }
 }
