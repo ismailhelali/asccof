@@ -114,3 +114,11 @@ section {
 .course button:hover {
   background-color: #0062cc;
 }
+
+/* Responsive layout - */
+@media screen and (max-width:750px) {
+ .COURSE {
+       
+        width: 100%;
+      }
+ }
