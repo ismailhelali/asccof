@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>asccof Academic E-Learning </title>
     <link rel="stylesheet" href="style.css">
+	  <link rel="stylesheet" href="slide.css">
+
     <style>
 	    
 
@@ -83,15 +85,79 @@ input[type="submit"]:hover {
 		<br>
 	      <br> vous serez en mesure de développer votre propre style de leadership unique et efficace.
 	      </button>
+	     
       </div>
     </header>
+	  
+	  
+	  
     <main>
       <section id="courses">
 	<h4>Bienvenue dans notre programme de formation en MASTER professionnel, qui propose 5 spécialités passionnantes pour vous aider à développer vos compétences et à atteindre vos objectifs professionnels.
 <br><br>
 		
 Nous sommes convaincus que notre programme vous offrira une expérience de formation unique et attrayante, qui vous aidera à vous démarquer dans votre carrière.
-		
+	
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="https://raw.githubusercontent.com/ismailhelali/asccof/main/masteracademy.jpg" style="width:100%">
+  <div class="text">MASTER professionnel</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="img_snow_wide.jpg" style="width:100%">
+  <div class="text">Coaching</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="img_mountains_wide.jpg" style="width:100%">
+  <div class="text">Lean Management</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>	
 <br><br>		
 
 - le coaching. Si vous êtes intéressé par l'amélioration de la performance, la gestion de carrière et le développement personnel, cette spécialité est faite pour vous. Vous apprendrez des techniques de coaching innovantes pour accompagner des individus ou des groupes dans leur évolution professionnelle et personnelle.<br>
