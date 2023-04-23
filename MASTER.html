@@ -7,9 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <style>
 	    
-.descz {
-  display: none;
-}
+
 	    
       #form-container {
   background-color: #f9f9f9;
@@ -124,6 +122,16 @@ Le Master en Coaching prépare les diplômés à travailler comme coachs profess
 		</p>
 		
 	<script>
+		
+		window.onload = function() {
+  var descElements = document.getElementsByClassName("desc");
+  for (var i = 0; i < descElements.length; i++) {
+    descElements[i].style.display = "none";
+  }
+}
+
+		
+		
   const buttons = document.querySelectorAll('.what');
 
   for (let i = 0; i < buttons.length; i++) {
