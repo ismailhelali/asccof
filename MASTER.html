@@ -7,9 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <style>
 	    
-	  .description {
-  display: none;
-}
+
 	    
       #form-container {
   background-color: #f9f9f9;
@@ -110,7 +108,7 @@ Notre programme de formation est conçu pour vous offrir une expérience d'appre
           <h4>Une filière MASTER Professionnelle sur une année, un weekend sur deux est proposée :</h4> <br>
          <button class="what">MASTER Professionnelle en COACHING</button>
 
-          <p class="description">
+          <p class="desc">
           Le Master en Coaching est une formation de deux ans qui permet aux étudiants d'acquérir des compétences en coaching professionnel. Les étudiants apprennent les principes de base du coaching, les différentes approches du coaching, ainsi que les compétences nécessaires pour travailler avec les clients dans un environnement professionnel.<br>
 
 La formation inclut des cours sur la psychologie, la communication, le leadership, la gestion du changement, la gestion de carrière, la gestion de conflits, ainsi que sur les compétences entrepreneuriales. Les étudiants développent des compétences en évaluation et en analyse, ainsi que des compétences en résolution de problèmes et en prise de décisions.<br>
@@ -124,18 +122,20 @@ Le Master en Coaching prépare les diplômés à travailler comme coachs profess
 		</p>
 		
 	<script>
-		
-const buttons = document.querySelectorAll(".what");
+  const buttons = document.querySelectorAll('.what');
 
-buttons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const description = button.nextElementSibling;
-    description.classList.toggle("show");
-  });
-});
+  for (let i = 0; i < buttons.length; i++) {
+    const button = buttons[i];
+    const desc = button.nextElementSibling;
 
-
-
+    button.addEventListener('click', () => {
+      if (desc.style.display === 'none') {
+        desc.style.display = 'block';
+      } else {
+        desc.style.display = 'none';
+      }
+    });
+  }
 </script>
 
 
