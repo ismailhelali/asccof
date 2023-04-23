@@ -125,12 +125,16 @@ Le Master en Coaching prépare les diplômés à travailler comme coachs profess
 		</p>
 		
 	<script>
-		var button = document.getElementById("whatcoaching");
-		var content = document.getElementById("pcoaching");
-		button.addEventListener("click", function() {
-			content.style.display = "block";
-		});
-	</script>
+    var buttons = document.getElementsByClassName("what");
+    var contents = document.getElementsByClassName("pwhat");
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener("click", function() {
+            var content = this.nextElementSibling;
+            content.style.display = "block";
+        });
+    }
+</script>
+
 		
         </div>
         <div class="course">
