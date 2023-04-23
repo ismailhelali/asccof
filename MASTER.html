@@ -225,33 +225,7 @@ Le Master en Coaching prépare les diplômés à travailler comme coachs profess
 	<button id="coaching" onclick="displayForm('coaching')">INSCRIPTION EN LIGNE</button>
 
 		</p>
-		
-	<script>
-		
-		window.onload = function() {
-  var descElements = document.getElementsByClassName("desc");
-  for (var i = 0; i < descElements.length; i++) {
-    descElements[i].style.display = "none";
-  }
-}
-
-		
-		
-  const buttons = document.querySelectorAll('.what');
-
-  for (let i = 0; i < buttons.length; i++) {
-    const button = buttons[i];
-    const desc = button.nextElementSibling;
-
-    button.addEventListener('click', () => {
-      if (desc.style.display === 'none') {
-        desc.style.display = 'block';
-      } else {
-        desc.style.display = 'none';
-      }
-    });
-  }
-</script>
+	
 
 
 		
@@ -439,3 +413,30 @@ Le Master en Lean Management prépare les diplômés à occuper des postes de di
 
  
   </script>
+	
+	<script>
+		
+		window.onload = function() {
+  var descElements = document.getElementsByClassName("desc");
+  for (var i = 0; i < descElements.length; i++) {
+    descElements[i].style.display = "none";
+  }
+}
+
+		
+		
+  const buttons = document.querySelectorAll('.what');
+
+  for (let i = 0; i < buttons.length; i++) {
+    const button = buttons[i];
+    const desc = button.nextElementSibling;
+
+    button.addEventListener('click', () => {
+      if (desc.style.display === 'none') {
+        desc.style.display = 'block';
+      } else {
+        desc.style.display = 'none';
+      }
+    });
+  }
+</script>
