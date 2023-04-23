@@ -130,10 +130,15 @@ Le Master en Coaching prépare les diplômés à travailler comme coachs profess
     for (var i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener("click", function() {
             var content = this.nextElementSibling;
-            content.style.display = "block";
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
         });
     }
 </script>
+
 
 		
         </div>
