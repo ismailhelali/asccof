@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="style.css">
     <style>
 	    
-	  
+	  .description {
+  display: none;
+}
 	    
       #form-container {
   background-color: #f9f9f9;
@@ -108,7 +110,7 @@ Notre programme de formation est conçu pour vous offrir une expérience d'appre
           <h4>Une filière MASTER Professionnelle sur une année, un weekend sur deux est proposée :</h4> <br>
          <button class="what">MASTER Professionnelle en COACHING</button>
 
-          <p>
+          <p class="description">
           Le Master en Coaching est une formation de deux ans qui permet aux étudiants d'acquérir des compétences en coaching professionnel. Les étudiants apprennent les principes de base du coaching, les différentes approches du coaching, ainsi que les compétences nécessaires pour travailler avec les clients dans un environnement professionnel.<br>
 
 La formation inclut des cours sur la psychologie, la communication, le leadership, la gestion du changement, la gestion de carrière, la gestion de conflits, ainsi que sur les compétences entrepreneuriales. Les étudiants développent des compétences en évaluation et en analyse, ainsi que des compétences en résolution de problèmes et en prise de décisions.<br>
@@ -123,21 +125,15 @@ Le Master en Coaching prépare les diplômés à travailler comme coachs profess
 		
 	<script>
 		
-    // Select all buttons with class "what"
-const buttons = document.querySelectorAll("button.what");
+const buttons = document.querySelectorAll(".what");
 
-// Add a click event listener to each button
-buttons.forEach(button => {
+buttons.forEach((button) => {
   button.addEventListener("click", () => {
-    // Get the next element sibling of the button
-    const nextElement = button.nextElementSibling;
-    // Check if the next element is a <p> tag
-    if (nextElement.tagName === "P") {
-      // Toggle the display of the <p> tag
-      nextElement.style.display = (nextElement.style.display === "none") ? "block" : "none";
-    }
+    const description = button.nextElementSibling;
+    description.classList.toggle("show");
   });
 });
+
 
 
 </script>
