@@ -123,15 +123,22 @@ Le Master en Coaching prépare les diplômés à travailler comme coachs profess
 		
 	<script>
 		
-    var buttons = document.querySelectorAll('.what');
-for (var i = 0; i < buttons.length; i++) {
-  buttons[i].addEventListener('click', function() {
-    var nextElement = this.nextElementSibling;
-    if (nextElement.tagName === 'P') {
-      nextElement.style.display = 'block';
+    // Select all buttons with class "what"
+const buttons = document.querySelectorAll("button.what");
+
+// Add a click event listener to each button
+buttons.forEach(button => {
+  button.addEventListener("click", () => {
+    // Get the next element sibling of the button
+    const nextElement = button.nextElementSibling;
+    // Check if the next element is a <p> tag
+    if (nextElement.tagName === "P") {
+      // Toggle the display of the <p> tag
+      nextElement.style.display = (nextElement.style.display === "none") ? "block" : "none";
     }
   });
-}
+});
+
 
 </script>
 
