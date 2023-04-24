@@ -248,17 +248,14 @@ courseElements.forEach(courseElement => {
 });
 
 // add a click event listener to the body that listens for clicks on buttons with the 'what' class
-document.body.addEventListener('click', event => {
+document.addEventListener('click', event => {
   if (event.target.classList.contains('what')) {
     const course = event.target.closest('.course');
     const desc = course.querySelector('.desc');
-    desc.classList.toggle('show');
-  } else if (event.target.classList.contains('hide')) {
-    const course = event.target.closest('.course');
-    const desc = course.querySelector('.desc');
-    desc.classList.remove('show');
+    desc.classList.toggle('hide');
   }
 });
+
 
 
 
@@ -449,5 +446,4 @@ Le Master en Lean Management prépare les diplômés à occuper des postes de di
   idField.value = id;
   formContainer.scrollIntoView({behavior: "smooth"});
 }
-
-
+	  </script>
