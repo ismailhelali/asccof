@@ -237,7 +237,6 @@ footer {
 	  
 	  
 	  
-    <main>
 	<h4>Bienvenue dans notre programme de formation en MASTER professionnel, qui propose 5 spécialités passionnantes pour vous aider à développer vos compétences et à atteindre vos objectifs professionnels.</h4>
 <br><br>
 		
@@ -360,7 +359,7 @@ const courseElements = products.map(product => {
 });
 
 // add the course elements to the body
-const body = document.main;
+const body = document.body;
 courseElements.forEach(courseElement => {
   body.appendChild(courseElement);
 });
@@ -408,7 +407,7 @@ document.body.addEventListener('click', event => {
     </div>
   </form>
 </div>
-    </main>
+    
     
   </body>
 </html>
