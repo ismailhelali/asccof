@@ -199,7 +199,7 @@ footer {
   box-shadow: 0 5px #666; /* Add a shadow effect */
   transform: translateY(0px); /* Move the button down a bit */
 }
-#pcourses {
+.desc {
 	width : 50%;
 }
     </style>
@@ -330,6 +330,7 @@ const courseElements = products.map(product => {
 
   button2.textContent = 'INSCRIPTION EN LIGNE';
   button2.id = product.name;
+  button2.classList.add('desc');
 
   course.classList.add('course');
   course.appendChild(h1);
