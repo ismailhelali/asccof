@@ -330,15 +330,16 @@ const courseElements = products.map(product => {
 
   button2.textContent = 'INSCRIPTION EN LIGNE';
   button2.id = product.name;
-  button2.classList.add('desc');
-
+  button2.onclick = function() { // Step 3: Set onclick attribute to the function you want to execute
+    alert('You clicked me!');
+  };
+	
   course.classList.add('course');
   course.appendChild(h1);
   course.appendChild(h3);
   course.appendChild(button);
   course.appendChild(p);
-  course.appendChild(button2);
-
+  p.appendChild(button2);
   return course;
 });
 
