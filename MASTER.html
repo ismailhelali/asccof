@@ -247,17 +247,19 @@ courseElements.forEach(courseElement => {
   body.appendChild(courseElement);
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-  const body = document.querySelector('body');
-  // add a click event listener to the body that listens for clicks on buttons with the 'what' class
-  body.addEventListener('click', event => {
-    if (event.target.classList.contains('what')) {
-      const course = event.target.closest('.course');
-      const desc = course.querySelector('.desc');
-      desc.classList.toggle('show');
-    }
-  });
+// add a click event listener to the body that listens for clicks on buttons with the 'what' class
+document.body.addEventListener('click', event => {
+  if (event.target.classList.contains('what')) {
+    const course = event.target.closest('.course');
+    const desc = course.querySelector('.desc');
+    desc.classList.toggle('show');
+  } else if (event.target.classList.contains('hide')) {
+    const course = event.target.closest('.course');
+    const desc = course.querySelector('.desc');
+    desc.classList.remove('show');
+  }
 });
+
 
 
 	      </script>	
