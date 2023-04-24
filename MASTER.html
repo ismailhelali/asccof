@@ -212,39 +212,52 @@ function showSlides(n) {
 
         
           <script type="module">
-		import { products } from './master.js';
+  import { products } from './master.js';
 
-		// create the HTML elements
-		const course = document.createElement('div');
-		const h1 = document.createElement('h1');
-		const h3 = document.createElement('h3');
-		const button = document.createElement('button');
-		const p = document.createElement('p');
-		const button2 = document.createElement('button');
+  // create the HTML elements
+  const course = document.createElement('div');
+  const h1 = document.createElement('h1');
+  const h3 = document.createElement('h3');
+  const button = document.createElement('button');
+  const p = document.createElement('p');
+  const button2 = document.createElement('button');
 
-		// set the content of the elements using the data from the products array
-		h1.textContent = products[0].name;
-		h3.textContent = products[0].firstDescription;
-		button.textContent = products[0].name;
-		button.classList.add('what');
-		p.textContent = products[0].secondDescription;
-		p.classList.add('desc');
+  // set the content of the elements using the data from the products array
+  h1.textContent = products[0].name;
+  h3.textContent = products[0].firstDescription;
+  button.textContent = products[0].name;
+  button.classList.add('what');
+  p.textContent = products[0].secondDescription;
+  p.classList.add('desc');
 
-		button2.textContent = 'INSCRIPTION EN LIGNE';
-                button2.id = products[0].name;
+  button2.textContent = 'INSCRIPTION EN LIGNE';
+  button2.id = products[0].name;
 
-		// add the elements to the course div
-		course.classList.add('course');
-		course.appendChild(h1);
-		course.appendChild(h3);
-		course.appendChild(button);
-		course.appendChild(p);
-		course.appendChild(button2);
+  // add the elements to the course div
+  course.classList.add('course');
+  course.appendChild(h1);
+  course.appendChild(h3);
+  course.appendChild(button);
+  course.appendChild(p);
+  course.appendChild(button2);
 
-		// add the course div to the body
-		document.body.appendChild(course);
-	</script>
-	
+  // add the course div to the body
+  document.body.appendChild(course);
+
+  // add a click event listener to the body that listens for clicks on buttons with the 'what' class
+  document.body.addEventListener('click', (event) => {
+    const button = event.target.closest('.what');
+    if (button) {
+      const desc = button.nextElementSibling;
+      if (desc.style.display === 'none') {
+        desc.style.display = 'block';
+      } else {
+        desc.style.display = 'none';
+      }
+    }
+  });
+</script>
+
 
 		
         
