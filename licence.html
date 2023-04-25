@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Academic E-Learning School</title>
+<style>
+  /* Global styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Header styles */
+header {
+  background-color: #f2f2f2;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+  nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 1rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin: 0 1rem;
+}
+
+  #hero {
+  background-image: url('hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 5rem;
+}
+
+#hero h2 {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+#hero p {
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+#hero button {
+  background-color: #fff;
+  color: #333;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#hero button:hover {
+  background-color: #333;
+  color: #fff;
+}
+.course {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.course:hover {
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+}
+
+.course h1 {
+  font-size: 2rem;
+  margin: 1rem;
+}
+
+.course h3 {
+  font-size: 1.5rem;
+  margin: 1rem;
+  font-weight: normal;
+}
+
+.course p {
+  margin: 1rem;
+}
+
+.course .desc {
+  display: none;
+  margin: 1rem;
+}
+
+.course .show {
+  display: block;
+}
+
+  
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+  </style>
+  </head>
+<body>
+	<header>
+		<h1>Academic E-Learning School</h1>
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Courses</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section id="hero">
+			<h2>Learn From Anywhere</h2>
+			<p>Our online courses allow you to learn at your own pace, from anywhere in the world.</p>
+			<button>Get Started</button>
+		</section>
+		<section id="courses">
+			
+      <script type="module">
+               import { products } from './master.js';
+
+// create the HTML elements for each course
+const courseElements = products.map(product => {
+  const course = document.createElement('div');
+  const h1 = document.createElement('h1');
+  const h3 = document.createElement('h3');
+  const button = document.createElement('button');
+  const p = document.createElement('p');
+  const button2 = document.createElement('button');
+
+  h1.textContent = product.name;
+  h3.textContent = product.firstDescription;
+  button.textContent = product.name;
+  button.classList.add('what');
+  p.textContent = product.secondDescription;
+  p.classList.add('desc');
+
+  button2.textContent = 'INSCRIPTION EN LIGNE';
+  button2.id = product.name;
+  button2.onclick = function() { // Step 3: Set onclick attribute to the function you want to execute
+  var formContainer = document.getElementById("form-container");
+  var subjectField = document.getElementById("subject");
+  var idField = document.getElementById("id");
+  formContainer.style.display = "block";
+  subjectField.value = id;
+  idField.value = id;
+  formContainer.scrollIntoView({behavior: "smooth"});
+
+  };
+	
+  course.classList.add('course');
+  course.appendChild(h1);
+  course.appendChild(h3);
+  course.appendChild(button);
+  course.appendChild(p);
+  p.appendChild(button2);
+  return course;
+});
+
+// add the course elements to the body
+const body = document.body;
+courseElements.forEach(courseElement => {
+  body.appendChild(courseElement);
+});
+
+// add a click event listener to the body that listens for clicks on buttons with the 'what' class
+document.body.addEventListener('click', event => {
+  if (event.target.classList.contains('what')) {
+    const course = event.target.closest('.course');
+    const desc = course.querySelector('.desc');
+    desc.classList.toggle('show');
+  }
+});
+
+	      </script>	
+      
+		</section>
+		<section id="about">
+			<h2>About Us</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sagittis massa quis mauris bibendum, sed tempor augue euismod. Suspendisse ac augue vel tellus auctor fringilla eu non erat. In non mi tincidunt, bibendum arcu sit amet, bibendum sapien.</p>
+			<p>Nunc vestibulum neque vel mi semper, sit amet maximus tortor bibendum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris pellentesque leo quis nunc rhoncus, id fringilla velit imperdiet. Suspendisse non mauris mauris. </p>
+		</section>
+	</main>
+	<footer>
+		<p>&copy; 2023 Academic E-Learning School. All Rights Reserved.</p>
+	</footer>
+</body>
+</html>
